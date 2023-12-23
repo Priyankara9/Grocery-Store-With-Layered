@@ -14,6 +14,7 @@ public class AppInitializer extends Application {
         primaryStage.setTitle("GroceryStore");
         primaryStage.setScene(new Scene((Parent) FXMLLoader.load(getClass().getResource("view/DashBoardForm.fxml"))));
         primaryStage.show();
+        primaryStage.centerOnScreen();
     }
 
     public static void main(String[] args) {
