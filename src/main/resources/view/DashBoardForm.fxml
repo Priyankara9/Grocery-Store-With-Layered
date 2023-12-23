@@ -1,12 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane fx:id="customerButtonId" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardController">
+<AnchorPane fx:id="pane" prefHeight="451.0" prefWidth="635.0" style="-fx-background-color: #e7d474;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardController">
    <children>
-      <JFXButton layoutX="42.0" layoutY="54.0" prefHeight="25.0" prefWidth="85.0" text="Customer" />
+      <Button layoutX="43.0" layoutY="57.0" mnemonicParsing="false" onAction="#customerButtonOnAction" prefHeight="38.0" prefWidth="131.0" style="-fx-background-color: #00ff47;" text="Customer">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font></Button>
+      <Label fx:id="lblTime" alignment="CENTER" layoutX="472.0" layoutY="18.0" prefHeight="38.0" prefWidth="131.0" text="HH:mm:ss" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="43.0" layoutY="128.0" onAction="#itemsButtonOnAction" prefHeight="38.0" prefWidth="131.0" style="-fx-background-color: #ff3d00;" text="Items" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="43.0" layoutY="307.0" onAction="#placeOrderButtonOnAction" prefHeight="74.0" prefWidth="131.0" style="-fx-background-color: #194d33;" text="Place Order" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>
