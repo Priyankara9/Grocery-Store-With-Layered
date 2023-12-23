@@ -7,9 +7,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="pane" prefHeight="451.0" prefWidth="635.0" style="-fx-background-color: #e7d474;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardController">
+<AnchorPane fx:id="pane" prefHeight="451.0" prefWidth="635.0" style="-fx-background-color: #e7d474;"
+            xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.DashBoardController">
    <children>
-      <Button layoutX="43.0" layoutY="57.0" mnemonicParsing="false" onAction="#customerButtonOnAction" prefHeight="38.0" prefWidth="131.0" style="-fx-background-color: #00ff47;" text="Customer">
+      <Button layoutX="43.0" layoutY="57.0" mnemonicParsing="false"
+              onAction="#customerButtonOnAction" prefHeight="38.0" prefWidth="131.0"
+              style="-fx-background-color: #00ff47;" text="Customer">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font></Button>
