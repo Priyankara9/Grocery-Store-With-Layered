@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4161a6ed-3123-40cb-80fd-619f1113735b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dto/ItemDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dto/tm/ItemTm.java" afterDir="false" />
+    <list default="true" id="4161a6ed-3123-40cb-80fd-619f1113735b" name="Changes" comment="set action to item button to load item form and load data to item table but not showing data(to be corrected) also set action to back button of item form">
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/PlaceOrderFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dto/tm/OrderTm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/PlaceOrderForm.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/DashBoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/DashBoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ItemFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ItemFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/Item.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/Item.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +171,7 @@
       <updated>1703303256786</updated>
       <workItem from="1703303257757" duration="15070000" />
       <workItem from="1703322948308" duration="27090000" />
-      <workItem from="1703388367964" duration="25599000" />
+      <workItem from="1703388367964" duration="33189000" />
     </task>
     <task id="LOCAL-00001" summary="first commit on creating Dash Board form and configuration">
       <option name="closed" value="true" />
@@ -268,7 +269,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703405501194</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="set action to item button to load item form and load data to item table but not showing data(to be corrected) also set action to back button of item form">
+      <option name="closed" value="true" />
+      <created>1703419772757</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1703419772759</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,7 +308,8 @@
     <MESSAGE value="Set action to backButton to load DashBoardForm" />
     <MESSAGE value="Set action to reloadButton to refresh customerTable" />
     <MESSAGE value="create ItemForm User interface and ItemFormController.java class" />
-    <option name="LAST_COMMIT_MESSAGE" value="create ItemForm User interface and ItemFormController.java class" />
+    <MESSAGE value="set action to item button to load item form and load data to item table but not showing data(to be corrected) also set action to back button of item form" />
+    <option name="LAST_COMMIT_MESSAGE" value="set action to item button to load item form and load data to item table but not showing data(to be corrected) also set action to back button of item form" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

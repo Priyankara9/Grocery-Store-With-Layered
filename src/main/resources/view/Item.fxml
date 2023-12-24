@@ -13,10 +13,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="bdPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="491.0" prefWidth="678.0" style="-fx-background-color: #c4def6;"
-            xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="controller.ItemFormController">
+<BorderPane fx:id="bdPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="678.0" style="-fx-background-color: #c4def6;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemFormController">
     <center>
         <GridPane BorderPane.alignment="CENTER">
             <columnConstraints>
@@ -50,29 +47,18 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <JFXTextField fx:id="txtCode" maxWidth="-Infinity" prefHeight="25.0" prefWidth="109.0"
-                                      style="-fx-background-color: #FFFFFF;" GridPane.halignment="LEFT"
-                                      GridPane.rowIndex="1" />
+                        <JFXTextField fx:id="txtCode" maxWidth="-Infinity" prefHeight="25.0" prefWidth="109.0" style="-fx-background-color: #FFFFFF;" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
                         <Label prefHeight="17.0" prefWidth="58.0" text="Item Code" />
-                        <JFXTextField fx:id="txtDescription" maxWidth="-Infinity" prefHeight="25.0" prefWidth="262.0"
-                                      style="-fx-background-color: #FFFFFF;" GridPane.columnIndex="2"
-                                      GridPane.rowIndex="1" />
+                        <JFXTextField fx:id="txtDescription" maxWidth="-Infinity" prefHeight="25.0" prefWidth="262.0" style="-fx-background-color: #FFFFFF;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                         <Label prefHeight="17.0" prefWidth="87.0" text="Description" GridPane.columnIndex="2" />
-                        <JFXTextField fx:id="txtUnitPrice" maxWidth="-Infinity" prefWidth="150.0"
-                                      style="-fx-background-color: #FFFFFF;" GridPane.columnIndex="4"
-                                      GridPane.rowIndex="1" />
+                        <JFXTextField fx:id="txtUnitPrice" maxWidth="-Infinity" prefWidth="150.0" style="-fx-background-color: #FFFFFF;" GridPane.columnIndex="4" GridPane.rowIndex="1" />
                         <Label prefHeight="17.0" prefWidth="87.0" text="Unit Price" GridPane.columnIndex="4" />
-                        <JFXTextField fx:id="txtQty" maxWidth="-Infinity" prefWidth="80.0"
-                                      style="-fx-background-color: #FFFFFF;" GridPane.columnIndex="6"
-                                      GridPane.rowIndex="1" />
+                        <JFXTextField fx:id="txtQty" maxWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;" GridPane.columnIndex="6" GridPane.rowIndex="1" />
                         <Label prefHeight="17.0" prefWidth="58.0" text="QTY" GridPane.columnIndex="6" />
                     </children>
                 </GridPane>
-                <JFXTextField fx:id="txtSearch" maxWidth="-Infinity" prefWidth="200.0" promptText="Search"
-                              style="-fx-background-color: #FFFFFF;" GridPane.columnIndex="1"
-                              GridPane.rowIndex="3" />
-                <JFXTreeTableView fx:id="tblItem" style="-fx-background-color: #F9F8F4;"
-                                  GridPane.columnIndex="1" GridPane.rowIndex="5">
+                <JFXTextField fx:id="txtSearch" maxWidth="-Infinity" prefWidth="200.0" promptText="Search" style="-fx-background-color: #FFFFFF;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <JFXTreeTableView fx:id="tblItem" style="-fx-background-color: #F9F8F4;" GridPane.columnIndex="1" GridPane.rowIndex="5">
                     <columns>
                         <TreeTableColumn fx:id="colCode" prefWidth="82.0" text="Item Code" />
                         <TreeTableColumn fx:id="colDesc" prefWidth="166.0" text="Description" />
@@ -81,9 +67,7 @@
                         <TreeTableColumn fx:id="colOption" prefWidth="123.0" text="Option" />
                     </columns>
                 </JFXTreeTableView>
-                <JFXButton onAction="#saveButtonOnAction" prefHeight="30.0" prefWidth="65.0"
-                           style="-fx-background-color: #0693e3;" text="Save" textFill="WHITE"
-                           GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="7">
+                <JFXButton onAction="#saveButtonOnAction" prefHeight="30.0" prefWidth="65.0" style="-fx-background-color: #0693e3;" text="Save" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="7">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>
@@ -91,9 +75,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </JFXButton>
-                <JFXButton layoutX="600.0" layoutY="461.0" onAction="#updateButtonOnAction" prefHeight="30.0"
-                           prefWidth="72.0" style="-fx-background-color: #00d084;" text="Update" textFill="WHITE"
-                           GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="7">
+                <JFXButton layoutX="600.0" layoutY="461.0" onAction="#updateButtonOnAction" prefHeight="30.0" prefWidth="72.0" style="-fx-background-color: #00d084;" text="Update" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="7">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>
@@ -104,9 +86,7 @@
                         <Insets right="70.0" />
                     </GridPane.margin>
                 </JFXButton>
-            <JFXButton fx:id="backButtonId" onAction="#backButtonOnAction" prefHeight="31.0" prefWidth="61.0"
-                       style="-fx-background-color: #EB144C;" text="Back"
-                       GridPane.columnIndex="1" GridPane.rowIndex="7">
+            <JFXButton fx:id="backButtonId" onAction="#backButtonOnAction" prefHeight="31.0" prefWidth="61.0" style="-fx-background-color: #EB144C;" text="Back" GridPane.columnIndex="1" GridPane.rowIndex="7">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>
