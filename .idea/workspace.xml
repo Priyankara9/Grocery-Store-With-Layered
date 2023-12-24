@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4161a6ed-3123-40cb-80fd-619f1113735b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/CustomerFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/CustomerFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/ItemFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ItemController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/Item.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/Item.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +169,7 @@
       <updated>1703303256786</updated>
       <workItem from="1703303257757" duration="15070000" />
       <workItem from="1703322948308" duration="27090000" />
-      <workItem from="1703388367964" duration="12044000" />
+      <workItem from="1703388367964" duration="14639000" />
     </task>
     <task id="LOCAL-00001" summary="first commit on creating Dash Board form and configuration">
       <option name="closed" value="true" />
@@ -248,7 +251,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703400898763</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Set action to reloadButton to refresh customerTable">
+      <option name="closed" value="true" />
+      <created>1703401095866</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1703401095866</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,7 +288,8 @@
     <MESSAGE value="add functionality to save button on CustomerForm" />
     <MESSAGE value="set data to all text fields from selected row in customer table and Set Action to updateButton to update" />
     <MESSAGE value="Set action to backButton to load DashBoardForm" />
-    <option name="LAST_COMMIT_MESSAGE" value="Set action to backButton to load DashBoardForm" />
+    <MESSAGE value="Set action to reloadButton to refresh customerTable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Set action to reloadButton to refresh customerTable" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
