@@ -152,6 +152,9 @@ public class CustomerFormController {
     }
 
     public void reloadButtonOnAction(ActionEvent actionEvent) {
+        loadCustomerTable();
+        clearFields();
+        tblCustomer.refresh();
     }
 
     public void updateButtonOnAction(ActionEvent actionEvent) {
