@@ -56,7 +56,20 @@ public class CustomerFormController {
         colOption.setCellValueFactory(new PropertyValueFactory("btn"));
 
         loadCustomerTable();
+        tblCustomer.getSelectionModel().selectedItemProperty().addListener((observableValue, oldValue, newValue) -> {
+            setTexts((CustomerTm) newValue);
+        });
 
+    }
+
+    private void setTexts(CustomerTm newValue) {
+        if (newValue != null) {
+            txtId.setEditable(false);
+            txtId.setText(newValue.getId());
+            txtName.setText(newValue.getName());
+            txtAddress.setText(newValue.getAddress());
+            txtSalary.setText(String.valueOf(newValue.getSalary()));
+        }
     }
 
     private void loadCustomerTable() {
@@ -138,7 +151,27 @@ public class CustomerFormController {
     }
 
     public void updateButtonOnAction(ActionEvent actionEvent) {
+        CustomerDto dto =new CustomerDto(
+                txtId.getText(),
+                txtName.getText(),
+                txtAddress.getText(),
+                Double.parseDouble(txtSalary.getText())
+
+        );
+        for (int i=0;i<dbclist.size();i++) {
+            if(dbclist.get(i).getId().equals(dto.getId())){
+                dbclist.set(i,dto);
+            }
+        }
+        loadCustomerTable();
+
+
+
     }
+
+
+
+
 
     public void backButtonOnAction(ActionEvent actionEvent) {
     }
