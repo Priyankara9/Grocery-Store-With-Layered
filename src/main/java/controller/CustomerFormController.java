@@ -7,6 +7,7 @@ import dto.tm.CustomerTm;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -54,8 +55,6 @@ public class CustomerFormController {
         colSalary.setCellValueFactory(new PropertyValueFactory("salary"));
         colOption.setCellValueFactory(new PropertyValueFactory("btn"));
 
-
-
         loadCustomerTable();
 
     }
@@ -64,7 +63,13 @@ public class CustomerFormController {
         ObservableList<CustomerTm> ctm= FXCollections.observableArrayList();
         for (CustomerDto dto:dbclist) {
             JFXButton btn= new JFXButton("delete");
-            CustomerTm tm=new CustomerTm(dto.getId(),dto.getName(), dto.getAddress(), dto.getSalary(), btn);
+            CustomerTm tm=new CustomerTm(
+                    dto.getId(),
+                    dto.getName(),
+                    dto.getAddress(),
+                    dto.getSalary(),
+                    btn
+            );
             ctm.add(tm);
 
         }
@@ -74,6 +79,59 @@ public class CustomerFormController {
     }
 
     public void saveButtonOnAction(ActionEvent actionEvent) {
+        if (!isDuplicate(txtId.getText())){
+            if (!isMissing()) {
+                CustomerDto dtoSave = new CustomerDto(
+                        txtId.getText(),
+                        txtName.getText(),
+                        txtAddress.getText(),
+                        Double.parseDouble(txtSalary.getText())
+                );
+
+                dbclist.add(dtoSave);
+                loadCustomerTable();
+                clearFields();
+            }
+        }else {
+            new Alert(Alert.AlertType.ERROR,"Duplicate Entry").show();
+        }
+
+    }
+
+    private boolean isMissing() {
+        if (txtId.getText().isEmpty()||(txtId.getText()==null)){
+            new Alert(Alert.AlertType.ERROR,"CustomerId Required").show();
+            return true;
+        }
+        if (txtName.getText().isEmpty()||(txtName.getText()==null)){
+            new Alert(Alert.AlertType.ERROR,"Name Required").show();
+            return true;
+        }
+        if (txtAddress.getText().isEmpty()||(txtId.getText()==null)){
+            new Alert(Alert.AlertType.ERROR,"Address Required").show();
+            return true;
+        }
+        if (txtSalary.getText().isEmpty()||(txtId.getText()==null)){
+            new Alert(Alert.AlertType.ERROR,"Salary Required").show();
+            return true;
+        }
+        return false;
+    }
+
+    private boolean isDuplicate(String id) {
+        for (CustomerDto dto:dbclist) {
+            if (dto.getId().equals(id)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private void clearFields() {
+        txtId.clear();
+        txtName.clear();
+        txtAddress.clear();
+        txtSalary.clear();
     }
 
     public void reloadButtonOnAction(ActionEvent actionEvent) {
