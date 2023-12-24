@@ -42,6 +42,12 @@ public class DashBoardController {
     }
 
     public void itemsButtonOnAction(ActionEvent actionEvent) {
+        Stage stage= (Stage) pane.getScene().getWindow();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/Item.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void placeOrderButtonOnAction(ActionEvent actionEvent) {
