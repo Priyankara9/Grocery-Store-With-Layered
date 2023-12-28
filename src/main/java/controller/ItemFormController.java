@@ -6,9 +6,7 @@ import com.jfoenix.controls.JFXTreeTableView;
 import com.jfoenix.controls.RecursiveTreeItem;
 import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
 import db.DbConnection;
-import dto.CustomerDto;
 import dto.ItemDto;
-import dto.tm.CustomerTm;
 import dto.tm.ItemTm;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -36,13 +34,14 @@ public class ItemFormController {
     public JFXTextField txtUnitPrice;
     public JFXTextField txtQty;
     public JFXTextField txtSearch;
-    public JFXTreeTableView tblItem;
-    public TreeTableColumn colCode;
-    public TreeTableColumn colDesc;
-    public TreeTableColumn colUnitPrice;
-    public TreeTableColumn colQty;
-    public TreeTableColumn colOption;
+    public JFXTreeTableView<ItemTm> tblItem;
+    public TreeTableColumn<ItemTm,String> colCode;
+    public TreeTableColumn<ItemTm,String> colDesc;
+    public TreeTableColumn<ItemTm,Double> colUnitPrice;
+    public TreeTableColumn<ItemTm,Integer> colQty;
+    public TreeTableColumn<ItemTm,JFXButton> colOption;
     private List<ItemDto> dbItemList=new ArrayList();
+    ObservableList<ItemTm> iTmList= FXCollections.observableArrayList();
 
     public void initialize(){
         colCode.setCellValueFactory(new TreeItemPropertyValueFactory<>("itemCode"));
@@ -50,7 +49,7 @@ public class ItemFormController {
         colUnitPrice.setCellValueFactory(new TreeItemPropertyValueFactory<>("unitPrice"));
         colQty.setCellValueFactory(new TreeItemPropertyValueFactory<>("qty"));
         colOption.setCellValueFactory(new TreeItemPropertyValueFactory<>("btn"));
-        loadItemTable();
+
         try {
             ResultSet rs= DbConnection.getInstance().getConnection()
                     .createStatement().executeQuery("select * from item");
@@ -64,7 +63,10 @@ public class ItemFormController {
             }
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
+
+
         }
+        loadItemTable();
         //System.out.println("Retrieving data"+dbItemList);
 
         /*tblItem.getSelectionModel().selectedItemProperty().addListener((observableValue, oldValue, newValue) -> {
@@ -82,8 +84,8 @@ public class ItemFormController {
         }
     }*/
 
-    private void loadItemTable() {
-        ObservableList<ItemTm> iTm= FXCollections.observableArrayList();
+    private void loadItemTable(){
+
         for (ItemDto dto:dbItemList) {
             JFXButton btn= new JFXButton("delete");
             ItemTm tm=new ItemTm(
@@ -93,12 +95,14 @@ public class ItemFormController {
                     dto.getQty(),
                     btn
             );
-            iTm.add(tm);
+            iTmList.add(tm);
 
         }
-        RecursiveTreeItem<ItemTm> treeItem = new RecursiveTreeItem<>(iTm, RecursiveTreeObject::getChildren);
+        System.out.println(iTmList);
+        TreeItem<ItemTm> treeItem = new RecursiveTreeItem<>(iTmList, RecursiveTreeObject::getChildren);
         tblItem.setRoot(treeItem);
         tblItem.setShowRoot(false);
+
     }
 
     public void saveButtonOnAction(ActionEvent actionEvent) {
