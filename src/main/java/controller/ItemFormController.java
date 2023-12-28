@@ -13,6 +13,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeTableColumn;
 import javafx.scene.control.cell.TreeItemPropertyValueFactory;
@@ -63,8 +64,6 @@ public class ItemFormController {
             }
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
-
-
         }
         loadItemTable();
         //System.out.println("Retrieving data"+dbItemList);
@@ -95,6 +94,9 @@ public class ItemFormController {
                     dto.getQty(),
                     btn
             );
+            btn.setOnAction(actionEvent -> {
+                deleteItrm(tm);
+            });
             iTmList.add(tm);
 
         }
@@ -102,6 +104,17 @@ public class ItemFormController {
         TreeItem<ItemTm> treeItem = new RecursiveTreeItem<>(iTmList, RecursiveTreeObject::getChildren);
         tblItem.setRoot(treeItem);
         tblItem.setShowRoot(false);
+
+    }
+
+    private void deleteItrm(ItemTm tm) {
+        boolean isDeleted=iTmList.remove(tm);
+        if (isDeleted){
+            new Alert(Alert.AlertType.INFORMATION,"Item Deleted").show();
+            loadItemTable();
+        }
+
+
 
     }
 

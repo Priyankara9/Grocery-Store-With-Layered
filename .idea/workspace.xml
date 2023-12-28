@@ -60,7 +60,6 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
@@ -169,7 +168,7 @@
       <workItem from="1703322948308" duration="27090000" />
       <workItem from="1703388367964" duration="33879000" />
       <workItem from="1703480318764" duration="3029000" />
-      <workItem from="1703758274812" duration="5310000" />
+      <workItem from="1703758274812" duration="6730000" />
     </task>
     <task id="LOCAL-00001" summary="first commit on creating Dash Board form and configuration">
       <option name="closed" value="true" />
@@ -283,7 +282,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703430972082</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Correcttion to initializer method in ItemFormController class">
+      <option name="closed" value="true" />
+      <created>1703764984859</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1703764984859</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,7 +323,8 @@
     <MESSAGE value="create ItemForm User interface and ItemFormController.java class" />
     <MESSAGE value="set action to item button to load item form and load data to item table but not showing data(to be corrected) also set action to back button of item form" />
     <MESSAGE value="set action to placeOrder and load combo boxes and set action to add to card button" />
-    <option name="LAST_COMMIT_MESSAGE" value="set action to placeOrder and load combo boxes and set action to add to card button" />
+    <MESSAGE value="Correcttion to initializer method in ItemFormController class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correcttion to initializer method in ItemFormController class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
