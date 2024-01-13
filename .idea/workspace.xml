@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4161a6ed-3123-40cb-80fd-619f1113735b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/CustomerModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/ItemModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/OrderModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/impl/CustomerModelImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/impl/ItemModelImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/impl/OrderModelImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dto/OrderDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/OrderDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Orders.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/PlaceOrderFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/PlaceOrderFormController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +195,7 @@
       <workItem from="1704716561842" duration="18000" />
       <workItem from="1704722111608" duration="186000" />
       <workItem from="1704722343107" duration="8000" />
-      <workItem from="1705125714411" duration="394000" />
+      <workItem from="1705125714411" duration="2227000" />
     </task>
     <task id="LOCAL-00001" summary="first commit on creating Dash Board form and configuration">
       <option name="closed" value="true" />
@@ -330,7 +325,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703766330172</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="createdao,service packages and move all clases from model to dao">
+      <option name="closed" value="true" />
+      <created>1705126511782</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1705126511782</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -365,7 +368,8 @@
     <MESSAGE value="set action to placeOrder and load combo boxes and set action to add to card button" />
     <MESSAGE value="Correcttion to initializer method in ItemFormController class" />
     <MESSAGE value="swt Action to delete button in ItemFormController" />
-    <option name="LAST_COMMIT_MESSAGE" value="swt Action to delete button in ItemFormController" />
+    <MESSAGE value="createdao,service packages and move all clases from model to dao" />
+    <option name="LAST_COMMIT_MESSAGE" value="createdao,service packages and move all clases from model to dao" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
