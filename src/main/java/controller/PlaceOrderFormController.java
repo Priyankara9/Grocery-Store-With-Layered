@@ -140,6 +140,7 @@ public class PlaceOrderFormController {
             tblItem.refresh();
         });
         boolean isExist = false;
+
         for (OrderTm order:tmList) {
             if (order.getCode().equals(orderTm.getCode())){
                 order.setQty(order.getQty()+orderTm.getQty());
